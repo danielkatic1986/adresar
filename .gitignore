@@ -1,0 +1,23 @@
+# CLion/JetBrains IDE datoteke
+.idea/
+cmake-build-*/
+*.iml
+
+# Build artefakti
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Backup i privremene datoteke
+*~
+*.swp
+*.tmp
+*.bak
+
+# Ostali build direktoriji
+/build/
+/bin/
+/debug/
+/release/
