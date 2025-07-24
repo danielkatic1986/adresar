@@ -3,4 +3,9 @@ project(adresar)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(adresar main.cpp)
+add_executable(adresar main.cpp
+        Stavka.h
+        Adresar.h
+        Stavka.cpp
+        Meni.h
+        Meni.cpp)
