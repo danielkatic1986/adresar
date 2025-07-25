@@ -13,4 +13,8 @@ add_executable(adresar main.cpp
         Adresar.h
         Stavka.cpp
         Adresar.cpp
+        Aplikacija.h
+        Meni.h
+        Meni.cpp
+        Aplikacija.cpp
 )
