@@ -15,12 +15,14 @@ struct Aplikacija {
     bool izvrsavaj = true;
     char izbor = 0;
 
-    void prijePokretanja();
+    static void prijePokretanja();
     void petlja();
-    void poslijePokretanja();
 
-    char traziUnos();
-    std::string unos(const std::string& poruka);
+    static void poslijePokretanja();
+
+    static char traziUnos();
+
+    static std::string unos(const std::string& poruka);
 };
 
 #endif //APLIKACIJA_H
