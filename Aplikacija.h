@@ -7,6 +7,7 @@
 
 #include "Adresar.h"
 #include "Meni.h"
+#include <string>
 
 struct Aplikacija {
     Adresar adresar;
@@ -19,10 +20,6 @@ struct Aplikacija {
     void petlja();
 
     static void poslijePokretanja();
-
-    static char traziUnos();
-
-    static std::string unos(const std::string& poruka);
 };
 
 #endif //APLIKACIJA_H

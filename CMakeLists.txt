@@ -8,6 +8,14 @@ if (WIN32)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
 endif()
 
+include_directories(
+        ${CMAKE_SOURCE_DIR}/deps/windows/PDCurses-3.9
+)
+
+link_directories(
+        ${CMAKE_SOURCE_DIR}/deps/windows/PDCurses-3.9/wincon
+)
+
 add_executable(adresar main.cpp
         Stavka.h
         Adresar.h
@@ -18,3 +26,5 @@ add_executable(adresar main.cpp
         Meni.cpp
         Aplikacija.cpp
 )
+
+target_link_libraries(adresar ${CMAKE_SOURCE_DIR}/deps/windows/PDCurses-3.9/wincon/pdcurses.a)
