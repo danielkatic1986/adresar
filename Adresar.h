@@ -9,9 +9,10 @@
 #include "Stavka.h"
 
 struct Adresar {
-  Stavka stavke[1000];
+    Stavka stavke[1000];
+    static int zadnjiID;
 
-  bool dodaj(std::string ime, std::string prezime, std::string adresa,
+    bool dodaj(std::string ime, std::string prezime, std::string adresa,
              std::string kontakt, std::string email, std::string opis);
 };
 

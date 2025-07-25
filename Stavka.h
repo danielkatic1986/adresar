@@ -18,5 +18,6 @@ struct Stavka {
 };
 
 int generirajNoviID();
+int dohvatiZadnjiID();
 
 #endif //STAVKA_H

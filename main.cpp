@@ -37,6 +37,12 @@ int main() {
         std::cout << "Unesite izbor: ";
         std::cin >> izbor;
         switch (std::tolower(izbor)) {
+            case '1':
+
+            break;
+            case '2':
+                adresar.dodaj("Daniel", "Katic", "Zezelovo selo 29", "0921175505", "danielkatic@gmail.com", "Proba");
+            break;
             case 'x':
                 izvrsavaj = false;
             break;

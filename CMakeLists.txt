@@ -9,4 +9,5 @@ add_executable(adresar main.cpp
         Stavka.h
         Adresar.h
         Stavka.cpp
+        Adresar.cpp
 )
