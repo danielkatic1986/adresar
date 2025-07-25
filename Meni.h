@@ -19,6 +19,8 @@ struct Meni {
     void prikazGlavnogMenija(WINDOW* win, int izbor) const;
     void prikazNaslova(WINDOW* win) const;
     void prikazAdresara(WINDOW *win, const Adresar& adresar) const;
+    static std::string skratiZaPrikaz(const std::string& tekst, size_t maxDuljina);
+    static void prikaziAlert(const std::string& poruka, const std::string& naslov = "Upozorenje");
 };
 
 #endif //MENI_H

@@ -7,13 +7,16 @@
 
 #include <string>
 
+constexpr short MAX_KONTAKTA = 5;
+constexpr short MAX_EMAILADRESA = 5;
+
 struct Stavka {
     int id;
     std::string ime;
     std::string prezime;
     std::string adresa;
-    std::string kontakti[5];
-    std::string emailAdrese[5];
+    std::string kontakti[MAX_KONTAKTA];
+    std::string emailAdrese[MAX_EMAILADRESA];
     std::string opis;
 };
 

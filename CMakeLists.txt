@@ -6,17 +6,18 @@ set(CMAKE_CXX_STANDARD 20)
 if (WIN32)
     # Samo na Windows koristiti -static
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
+    include_directories(${CMAKE_SOURCE_DIR}/deps/windows/PDCurses-3.9)
+    link_directories(${CMAKE_SOURCE_DIR}/deps/windows/PDCurses-3.9/wincon)
+    set(CURSES_LIB ${CMAKE_SOURCE_DIR}/deps/windows/PDCurses-3.9/wincon/pdcurses.a)
+else()
+    # Na Macu i Linuxu koristi ncurses
+    find_package(Curses REQUIRED)
+    include_directories(${CURSES_INCLUDE_DIR})
+    set(CURSES_LIB ${CURSES_LIBRARIES})
 endif()
 
-include_directories(
-        ${CMAKE_SOURCE_DIR}/deps/windows/PDCurses-3.9
-)
-
-link_directories(
-        ${CMAKE_SOURCE_DIR}/deps/windows/PDCurses-3.9/wincon
-)
-
-add_executable(adresar main.cpp
+add_executable(adresar
+        main.cpp
         Stavka.h
         Adresar.h
         Stavka.cpp
@@ -27,4 +28,4 @@ add_executable(adresar main.cpp
         Aplikacija.cpp
 )
 
-target_link_libraries(adresar ${CMAKE_SOURCE_DIR}/deps/windows/PDCurses-3.9/wincon/pdcurses.a)
+target_link_libraries(adresar ${CURSES_LIB})

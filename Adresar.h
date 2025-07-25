@@ -12,6 +12,7 @@ struct Adresar {
     Stavka stavke[1000];
     static int zadnjiID;
 
+    void splitZarez(const char* unos, std::string polje[], int maxPolja);
     bool dodaj(std::string ime, std::string prezime, std::string adresa,
              std::string kontakt, std::string email, std::string opis);
 };

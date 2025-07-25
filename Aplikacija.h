@@ -8,6 +8,7 @@
 #include "Adresar.h"
 #include "Meni.h"
 #include <string>
+#include <curses.h>
 
 struct Aplikacija {
     Adresar adresar;
@@ -16,10 +17,12 @@ struct Aplikacija {
     bool izvrsavaj = true;
     char izbor = 0;
 
-    static void prijePokretanja();
+    void prijePokretanja();
     void petlja();
+    void poslijePokretanja();
+    void unosNoveStavke();
 
-    static void poslijePokretanja();
+    std::string unosTeksta(WINDOW* win, int x, int y, int maxDuljina = 99);
 };
 
 #endif //APLIKACIJA_H
